@@ -17,7 +17,7 @@ class LoginPage extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('images/plant.jpg'),
+                image: AssetImage('images/teemy.jpg'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -58,7 +58,7 @@ class LoginPage extends StatelessWidget {
                   margin: EdgeInsets.only(
                       left: MediaQuery.of(context).size.width * 0.42),
                   child: Image.asset(
-                    'images/vase.png',
+                    'images/plant1.png',
                     height: MediaQuery.of(context).size.height * 0.1,
                   ),
                 ),
@@ -73,25 +73,25 @@ class LoginPage extends StatelessWidget {
                         topLeft: Radius.circular(
                             MediaQuery.of(context).size.width * 0.1),
                       ),
-                      color: const Color(0xff2EB886).withOpacity(0.5),
+                      color: Colors.white,
                     ),
                     child: Column(
                       children: [
                         SizedBox(
                           height: MediaQuery.of(context).size.height * 0.1,
                         ),
-                        const Text(
+                        Text(
                           'Welcome back',
                           style: TextStyle(
                               fontSize: 42,
-                              color: Colors.white,
+                              color: Colors.green[900],
                               fontWeight: FontWeight.bold),
                         ),
-                        const Text(
+                        Text(
                           'Login to my account',
                           style: TextStyle(
                               fontSize: 20,
-                              color: Color(0xff2EB886),
+                              color: Colors.black.withOpacity(0.5),
                               fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
@@ -128,9 +128,8 @@ class LoginPage extends StatelessWidget {
                                                 borderSide: BorderSide.none),
                                             labelText: 'Password',
                                             labelStyle: TextStyle(
-                                              color:
-                                                  Colors.black.withOpacity(0.5),
-                                            ),
+                                                color: Color(0xff2EB886),
+                                                fontWeight: FontWeight.bold),
                                           ),
                                         ),
                                       ),
@@ -168,14 +167,14 @@ class LoginPage extends StatelessWidget {
                                   Text(
                                     'Remember Me',
                                     style: TextStyle(
-                                        color: Colors.greenAccent[100],
+                                        color: Colors.black.withOpacity(0.5),
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ],
                               ),
                               const Text('Forgot Password?',
                                   style: TextStyle(
-                                      color: Colors.white,
+                                      color: Color(0xff2EB886),
                                       fontWeight: FontWeight.bold)),
                             ],
                           ),
@@ -222,7 +221,7 @@ class LoginPage extends StatelessWidget {
                                     Text(
                                       "Don't have an account?",
                                       style: TextStyle(
-                                          color: Colors.white.withOpacity(0.7)),
+                                          color: Colors.black.withOpacity(0.7)),
                                     ),
                                     GestureDetector(
                                       onTap: () {

@@ -17,8 +17,7 @@ Widget formField(BuildContext context, String title) {
             border: const UnderlineInputBorder(borderSide: BorderSide.none),
             labelText: title,
             labelStyle: TextStyle(
-              color: Colors.black.withOpacity(0.5),
-            ),
+                color: Color(0xff2EB886), fontWeight: FontWeight.bold),
           ),
         ),
       ),

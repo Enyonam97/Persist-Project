@@ -41,7 +41,7 @@ class MyScaffold extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/plant.jpg'),
+            image: AssetImage('images/teemy.jpg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -52,14 +52,14 @@ class MyScaffold extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 32.0),
               child: Text(
                 'The best app for your plants',
-                style: TextStyle(color: Color(0xff2EB886), fontSize: 64),
+                style: TextStyle(color: Colors.white, fontSize: 64),
               ),
             ),
             SizedBox(height: MediaQuery.of(context).size.height * 0.15),
             Container(
               margin: EdgeInsets.only(
                   top: MediaQuery.of(context).size.height * 0.04,
-                  bottom: MediaQuery.of(context).size.height * 0.02),
+                  bottom: MediaQuery.of(context).size.height * 0.04),
               decoration: BoxDecoration(
                   // border: Border.all(color: Colors.white, width: 3),
                   borderRadius: BorderRadius.circular(50.0),
