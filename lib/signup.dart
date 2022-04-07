@@ -3,8 +3,8 @@ import 'package:plant/form_field.dart';
 import 'package:plant/login.dart';
 import 'package:plant/main.dart';
 
-class RegisterPage extends StatelessWidget {
-  const RegisterPage({Key? key}) : super(key: key);
+class SignupPage extends StatelessWidget {
+  const SignupPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class RegisterPage extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('images/teemy.jpg'),
+                image: AssetImage('images/casey-horner-.jpg'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -59,7 +59,7 @@ class RegisterPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const Text(
-                        'Register',
+                        'Signup',
                         style: TextStyle(
                             fontSize: 42,
                             color: Colors.white,

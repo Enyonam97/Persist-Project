@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plant/form_field.dart';
 import 'package:plant/main.dart';
-import 'package:plant/register.dart';
+import 'package:plant/signup.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -17,7 +17,7 @@ class LoginPage extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('images/teemy.jpg'),
+                image: AssetImage('images/casey-horner-.jpg'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -58,7 +58,7 @@ class LoginPage extends StatelessWidget {
                   margin: EdgeInsets.only(
                       left: MediaQuery.of(context).size.width * 0.42),
                   child: Image.asset(
-                    'images/plant1.png',
+                    'images/vase.png',
                     height: MediaQuery.of(context).size.height * 0.1,
                   ),
                 ),
@@ -229,7 +229,7 @@ class LoginPage extends StatelessWidget {
                                           context,
                                           MaterialPageRoute(
                                             builder: (context) =>
-                                                const RegisterPage(),
+                                                const SignupPage(),
                                           ),
                                         );
                                       },

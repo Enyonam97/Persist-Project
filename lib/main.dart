@@ -1,9 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:plant/database.dart';
+import 'package:plant/dboperations.dart';
+import 'package:plant/homepage.dart';
 import 'package:plant/login.dart';
-import 'package:plant/register.dart';
+import 'package:plant/signup.dart';
+import 'dart:async';
+import 'package:path/path.dart';
+import 'package:sqflite/sqflite.dart';
+import 'package:plant/user.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  // Avoid errors caused by flutter upgrade.
+// Importing 'package:flutter/widgets.dart' is required.
+  WidgetsFlutterBinding.ensureInitialized();
+// Open the database and store the reference.
+
+  // Define a function that inserts dogs into the database
+
+// Create a Dog and add it to the dogs table
+  var kwesi = const user(
+    id: 0,
+    name: 'Kwesi',
+    age: 35,
+  );
+
+  await DBOperations().insertuser(kwesi);
+// A method that retrieves all the dogs from the dogs table.
+
+// Now, use the method above to retrieve all the dogs.
+  print(await DBOperations().getuser()); // Prints a list that include Fido.
+  var isLoggedIn = await DBOperations().getuser();
+  if (isLoggedIn.length > 0) {
+    //Route to home page if there is data in the db
+    runApp(MaterialApp(home: MyHomePage()));
+  } else {
+    //Route to login if there is no data
+    runApp(MaterialApp(home: LoginPage()));
+  }
 }
 
 class MyApp extends StatelessWidget {
@@ -41,7 +74,7 @@ class MyScaffold extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/teemy.jpg'),
+            image: AssetImage('images/casey-horner-.jpg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -72,7 +105,7 @@ class MyScaffold extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const RegisterPage(),
+                        builder: (context) => const SignupPage(),
                       ),
                     );
                   },
